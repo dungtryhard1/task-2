@@ -6,6 +6,7 @@
 
 html {
     font-family: "Lucida Sans", sans-serif;
+    scroll-behavior: smooth;
   }
 
 .row::after {
@@ -53,7 +54,7 @@ header {
     font-weight: 600;
 }
 
-.moblie-header-icon {
+.mobile-header-icon {
     float: right;
     display: none;
 }
@@ -88,6 +89,102 @@ header {
     background-color: #333;
     border-radius: 8px;
     color: #fff;
+}
+
+.nav-input {
+    display: none;
+}
+
+.nav-input:checked ~ .over-flow {
+    display: block;
+}
+
+.nav-input:checked ~ .nav-mobile-wrapper {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.over-flow {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    display: none;
+    animation: fadeIn linear 0.3s;
+} 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-mobile__close {
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    opacity: 0.7;
+}
+
+.nav-mobile__close:hover {
+    cursor: pointer;
+    opacity: 1;
+    background-color: #ccc;
+}
+
+.nav-mobile-wrapper > li {
+    list-style: none;
+    padding: 1rem 1.5rem;
+}
+
+.nav-mobile-wrapper > li > a {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.nav-mobile-wrapper > li:hover > a {
+    cursor: pointer;
+    background-color: #ccc;
+    
+}
+
+.nav-mobile-wrapper {
+    background-color: #fff;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 5;
+    transition: transform linear 0.3s, opacity linear 0.3s;
+}
+
+.nav-mobile {
+    white-space: nowrap;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.logo-wrapper > i {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* content__product  */
@@ -716,7 +813,7 @@ footer {
         overflow: hidden;
     }
 
-    .moblie-header-icon {
+    .mobile-header-icon {
         display: block;
         font-size: 24px;
         padding: 20px;

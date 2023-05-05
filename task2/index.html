@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".//assets/css/style.css">
-    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href=".//assets/img/themify-icons/themify-icons.css">
     <title>Digital Agency</title>
 </head>
 <body>
@@ -14,10 +14,10 @@
             <ul class="name-brand">
                 <p><span style="font-weight: 600; color:#2639ED">A+</span> Studio</p>
             </ul>
-            <i class="moblie-header-icon ti-menu-alt"></i>
+            <label for="check" class="mobile-header-icon ti-menu-alt"></label>
 
             <ul class="nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="#">Home list</a></li>
                 <li><a href="#">What We Do</a></li>
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Project</a></li>
@@ -26,6 +26,24 @@
             </ul>
 
         </header>
+        
+        <input type="checkbox" class="nav-input" name="" id="check">
+        <!-- over flow  -->
+        <label for="check" class="over-flow"></label>
+        <ul class="nav-mobile-wrapper">
+            <label for="check" class="ti-close nav-mobile__close"></label>
+            <li class="nav-mobile"><a href="#">Home</a></li>
+            <li class="nav-mobile"><a href="#">What we do</a></li>
+            <li class="nav-mobile"><a href="#">Service</a></li>
+            <li class="nav-mobile"><a href="#">Project</a></li>
+            <li class="nav-mobile"><a href="#">Blog</a></li>
+            <li class="nav-mobile"><a href="#footer">Contact</a></li>
+            <div class="logo-wrapper">
+                <i class="ti-facebook"> Facebook</i>
+                <i class="ti-instagram"> Instagram</i>
+                <i class="ti-google"> Google</i>
+            </div>
+        </ul>
         <!-- content  -->
         <div class="content">
             <div class="content__product row">
@@ -34,7 +52,7 @@
                     <p class="text-section">Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
                     <button class="contact-btn js-contact-btn">Contact Now</button>
                 </div>
-
+                
                 <div class="product__img col-7">
                     <div class="circle"></div>
                     <div class="rectangle"></div>
@@ -103,7 +121,7 @@
             <div class="content__great-digital row">
                 <div class="video-wrapper col-6">
                     <video class="my-video" controls>
-                        <source src="../assets/img/video.mp4">
+                        <source src="../task2/assets/img/video.mp4">
                     </video>
                     <div class="circle--yellow"></div>
                 </div>
@@ -164,7 +182,7 @@
             </div>
         </div>
         <!-- footer  -->
-        <footer class="row">
+        <footer id="footer" class="row">
             <div class="about col-4">
                 <p class="footer__item__heading"><span style="font-weight: 600; color:#2639ED">A+</span> Studio</p>
                 <p class="about-text">Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.</p>
@@ -244,21 +262,6 @@
     </div>
 </body>
 
-<script>
-    let headerBtn = document.querySelector('.moblie-header-icon');
-    let nav = document.querySelector('.nav');    
-
-    function showHideMenu() {
-        if (nav.style.display === 'none') {
-            nav.style.display = 'block';
-        } else {
-            nav.style.display = 'none';
-        }
-    }
-
-    headerBtn.addEventListener('click', showHideMenu);
-</script>
-
 <!-- showHideModal  -->
 <script>
     let modal = document.querySelector('.js-modal');
@@ -287,4 +290,5 @@
     
 
 </script>
+
 </html>
